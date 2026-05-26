@@ -1,0 +1,130 @@
+.hero {
+    height: 100vh;
+    background: url(https://tse2.mm.bing.net/th/id/OIP.IAV8aTrxbbqesidq5MczeQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3)
+    no-repeat center center/cover;
+    position: relative;
+    animation: zoomBg 20s infinite alternate ease-in-out;
+}
+
+/* Dark overlay */
+.overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Text Styling */
+.overlay h1 {
+    font-size: 50px;
+    animation: fadeIn 2s ease-in;
+}
+
+.overlay h2 {
+    color: #aaa;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in;
+}
+
+.overlay p {
+    width: 60%;
+    margin-top: 20px;
+    animation: fadeIn 4s ease-in;
+}
+
+/* Button */
+.overlay button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.overlay button:hover {
+    background: #00adb5;
+    color: white;
+}
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: black;
+}
+
+/* Background zoom animation */
+@keyframes zoomBg {
+    from {
+    transform: scale(1);
+    }
+    to {
+    transform: scale(1.1);
+    }
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+    transform: translateY(30px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .overlay h1 {
+    font-size: 32px;
+    }
+
+    .overlay h2 {
+    font-size: 20px;
+    }
+
+    .overlay p {
+    width: 90%;
+    font-size: 14px;
+    }
+
+    .buttons {
+    flex-direction: column;
+    }
+}
+
+.social-icons {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    font-size: 28px;
+}
+
+.social-icons a {
+    color: white;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00adb5;
+    transform: scale(1.2);
+}
